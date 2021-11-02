@@ -20,3 +20,10 @@ sudo apt-get install -y google-cloud-sdk-pubsub-emulator
 sudo apt-get install -y kubectl
 
 gcloud init
+
+=============================================
+
+docker 
+
+docker run -d --name apache2-container -e TZ=UTC -p 80:80 25e8
+docker exec -it apache2-container bash
