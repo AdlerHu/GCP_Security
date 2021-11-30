@@ -1,3 +1,8 @@
+#!/bin/sh
+
+sudo spt-get update
+sudo apt-get install -y curl
+
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 
 sudo apt-get install -y apt-transport-https ca-certificates gnupg
@@ -18,12 +23,3 @@ sudo apt-get install -y google-cloud-sdk-datastore-emulator
 sudo apt-get install -y google-cloud-sdk-firestore-emulator
 sudo apt-get install -y google-cloud-sdk-pubsub-emulator
 sudo apt-get install -y kubectl
-
-gcloud init
-
-=============================================
-
-docker 
-
-docker run -d --name apache2-container -e TZ=UTC -p 80:80 25e8
-docker exec -it apache2-container bash
